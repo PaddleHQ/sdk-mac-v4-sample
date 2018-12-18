@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F2B5E7F791EB27A3A962CB4 /* libPods-macOS SDK v4 Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29ACA51A36BC154FFE5DCA45 /* libPods-macOS SDK v4 Sample.a */; };
+		FE30E3A121C934B600630B68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE30E3A021C934B600630B68 /* AppDelegate.m */; };
+		FE30E3A421C934B600630B68 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE30E3A321C934B600630B68 /* ViewController.m */; };
+		FE30E3A621C934B800630B68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE30E3A521C934B800630B68 /* Assets.xcassets */; };
+		FE30E3A921C934B800630B68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE30E3A721C934B800630B68 /* Main.storyboard */; };
+		FE30E3AC21C934B800630B68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE30E3AB21C934B800630B68 /* main.m */; };
+		FE30E3BC21CA2E3C00630B68 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = FE30E3BB21CA2E3B00630B68 /* AppConfig.m */; };
+		FE30E3C921CBB9B200630B68 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE30E3C721CBB9B200630B68 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29ACA51A36BC154FFE5DCA45 /* libPods-macOS SDK v4 Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-macOS SDK v4 Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C431DF1738BD8909333D5C7D /* Pods-macOS SDK v4 Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS SDK v4 Sample.debug.xcconfig"; path = "Target Support Files/Pods-macOS SDK v4 Sample/Pods-macOS SDK v4 Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		F99F94DE5FC8889BD2592D46 /* Pods-macOS SDK v4 Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS SDK v4 Sample.release.xcconfig"; path = "Target Support Files/Pods-macOS SDK v4 Sample/Pods-macOS SDK v4 Sample.release.xcconfig"; sourceTree = "<group>"; };
+		FE30E39C21C934B600630B68 /* macOS SDK v4 Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macOS SDK v4 Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE30E39F21C934B600630B68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FE30E3A021C934B600630B68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FE30E3A221C934B600630B68 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FE30E3A321C934B600630B68 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FE30E3A521C934B800630B68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE30E3A821C934B800630B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE30E3AA21C934B800630B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE30E3AB21C934B800630B68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE30E3AD21C934B800630B68 /* macOS_SDK_v4_Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS_SDK_v4_Sample.entitlements; sourceTree = "<group>"; };
+		FE30E3B321C9383300630B68 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FE30E3B421C9383300630B68 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		FE30E3B521C9383300630B68 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		FE30E3B621C9383300630B68 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		FE30E3B721C9383300630B68 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
+		FE30E3B821C940AE00630B68 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		FE30E3BA21CA2E3B00630B68 /* AppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		FE30E3BB21CA2E3B00630B68 /* AppConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
+		FE30E3BD21CBB8A600630B68 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		FE30E3BE21CBB8B300630B68 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		FE30E3BF21CBB8BA00630B68 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		FE30E3C021CBB8C000630B68 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		FE30E3C121CBB8C500630B68 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		FE30E3C221CBB8CE00630B68 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		FE30E3C321CBB8DF00630B68 /* zh-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-TW"; path = "zh-TW.lproj/Main.strings"; sourceTree = "<group>"; };
+		FE30E3C421CBB8E500630B68 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		FE30E3C521CBB8F200630B68 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		FE30E3C621CBB8FE00630B68 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
+		FE30E3C821CBB9B200630B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE30E3CA21CBB9BB00630B68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE30E3CB21CBB9BD00630B68 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE30E3CC21CBB9BF00630B68 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE30E3CD21CBB9BF00630B68 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE30E3CE21CBB9C100630B68 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE30E3CF21CBB9C300630B68 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE30E3D021CBB9C400630B68 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FE30E3D121CBB9C600630B68 /* zh-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-TW"; path = "zh-TW.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FE30E3D221CBB9C700630B68 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE30E3D321CBB9C900630B68 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FE30E3D421CBB9CA00630B68 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE30E39921C934B600630B68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F2B5E7F791EB27A3A962CB4 /* libPods-macOS SDK v4 Sample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25274D8A0F38C0EA404084C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29ACA51A36BC154FFE5DCA45 /* libPods-macOS SDK v4 Sample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5CCB1D79CDE671CFB18F947 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C431DF1738BD8909333D5C7D /* Pods-macOS SDK v4 Sample.debug.xcconfig */,
+				F99F94DE5FC8889BD2592D46 /* Pods-macOS SDK v4 Sample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE30E39321C934B600630B68 = {
+			isa = PBXGroup;
+			children = (
+				FE30E3B821C940AE00630B68 /* Makefile */,
+				FE30E3B421C9383300630B68 /* Gemfile */,
+				FE30E3B721C9383300630B68 /* Gemfile.lock */,
+				FE30E3B521C9383300630B68 /* Podfile */,
+				FE30E3B621C9383300630B68 /* Podfile.lock */,
+				FE30E3B321C9383300630B68 /* README.md */,
+				FE30E39E21C934B600630B68 /* macOS SDK v4 Sample */,
+				FE30E39D21C934B600630B68 /* Products */,
+				D5CCB1D79CDE671CFB18F947 /* Pods */,
+				25274D8A0F38C0EA404084C6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FE30E39D21C934B600630B68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE30E39C21C934B600630B68 /* macOS SDK v4 Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE30E39E21C934B600630B68 /* macOS SDK v4 Sample */ = {
+			isa = PBXGroup;
+			children = (
+				FE30E3BA21CA2E3B00630B68 /* AppConfig.h */,
+				FE30E3BB21CA2E3B00630B68 /* AppConfig.m */,
+				FE30E39F21C934B600630B68 /* AppDelegate.h */,
+				FE30E3A021C934B600630B68 /* AppDelegate.m */,
+				FE30E3A221C934B600630B68 /* ViewController.h */,
+				FE30E3A321C934B600630B68 /* ViewController.m */,
+				FE30E3A521C934B800630B68 /* Assets.xcassets */,
+				FE30E3A721C934B800630B68 /* Main.storyboard */,
+				FE30E3AA21C934B800630B68 /* Info.plist */,
+				FE30E3AB21C934B800630B68 /* main.m */,
+				FE30E3AD21C934B800630B68 /* macOS_SDK_v4_Sample.entitlements */,
+				FE30E3C721CBB9B200630B68 /* Localizable.strings */,
+			);
+			path = "macOS SDK v4 Sample";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE30E39B21C934B600630B68 /* macOS SDK v4 Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE30E3B021C934B800630B68 /* Build configuration list for PBXNativeTarget "macOS SDK v4 Sample" */;
+			buildPhases = (
+				DA5CCEF510DE3E7105A9B9D8 /* [CP] Check Pods Manifest.lock */,
+				FE30E39821C934B600630B68 /* Sources */,
+				FE30E39921C934B600630B68 /* Frameworks */,
+				FE30E39A21C934B600630B68 /* Resources */,
+				E7A3605D6982785DBF7A8E57 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "macOS SDK v4 Sample";
+			productName = "macOS SDK v4 Sample";
+			productReference = FE30E39C21C934B600630B68 /* macOS SDK v4 Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE30E39421C934B600630B68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Paddle.com LTD";
+				TargetAttributes = {
+					FE30E39B21C934B600630B68 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = FE30E39721C934B600630B68 /* Build configuration list for PBXProject "macOS SDK v4 Sample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+				fr,
+				it,
+				ja,
+				de,
+				"zh-Hans",
+				"zh-TW",
+				ru,
+				pl,
+				pt,
+			);
+			mainGroup = FE30E39321C934B600630B68;
+			productRefGroup = FE30E39D21C934B600630B68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE30E39B21C934B600630B68 /* macOS SDK v4 Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE30E39A21C934B600630B68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE30E3A621C934B800630B68 /* Assets.xcassets in Resources */,
+				FE30E3C921CBB9B200630B68 /* Localizable.strings in Resources */,
+				FE30E3A921C934B800630B68 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA5CCEF510DE3E7105A9B9D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-macOS SDK v4 Sample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7A3605D6982785DBF7A8E57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-macOS SDK v4 Sample/Pods-macOS SDK v4 Sample-frameworks.sh",
+				"${PODS_ROOT}/PaddleV4/Paddle.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Paddle.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-macOS SDK v4 Sample/Pods-macOS SDK v4 Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE30E39821C934B600630B68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE30E3A421C934B600630B68 /* ViewController.m in Sources */,
+				FE30E3BC21CA2E3C00630B68 /* AppConfig.m in Sources */,
+				FE30E3AC21C934B800630B68 /* main.m in Sources */,
+				FE30E3A121C934B600630B68 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FE30E3A721C934B800630B68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE30E3A821C934B800630B68 /* Base */,
+				FE30E3BD21CBB8A600630B68 /* es */,
+				FE30E3BE21CBB8B300630B68 /* fr */,
+				FE30E3BF21CBB8BA00630B68 /* it */,
+				FE30E3C021CBB8C000630B68 /* ja */,
+				FE30E3C121CBB8C500630B68 /* de */,
+				FE30E3C221CBB8CE00630B68 /* zh-Hans */,
+				FE30E3C321CBB8DF00630B68 /* zh-TW */,
+				FE30E3C421CBB8E500630B68 /* ru */,
+				FE30E3C521CBB8F200630B68 /* pl */,
+				FE30E3C621CBB8FE00630B68 /* pt */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE30E3C721CBB9B200630B68 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE30E3C821CBB9B200630B68 /* Base */,
+				FE30E3CA21CBB9BB00630B68 /* en */,
+				FE30E3CB21CBB9BD00630B68 /* es */,
+				FE30E3CC21CBB9BF00630B68 /* fr */,
+				FE30E3CD21CBB9BF00630B68 /* it */,
+				FE30E3CE21CBB9C100630B68 /* ja */,
+				FE30E3CF21CBB9C300630B68 /* de */,
+				FE30E3D021CBB9C400630B68 /* zh-Hans */,
+				FE30E3D121CBB9C600630B68 /* zh-TW */,
+				FE30E3D221CBB9C700630B68 /* ru */,
+				FE30E3D321CBB9C900630B68 /* pl */,
+				FE30E3D421CBB9CA00630B68 /* pt */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE30E3AE21C934B800630B68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FE30E3AF21C934B800630B68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FE30E3B121C934B800630B68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C431DF1738BD8909333D5C7D /* Pods-macOS SDK v4 Sample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "macOS SDK v4 Sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paddle.samples.macOS-SDK-v4-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE30E3B221C934B800630B68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F99F94DE5FC8889BD2592D46 /* Pods-macOS SDK v4 Sample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "macOS SDK v4 Sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paddle.samples.macOS-SDK-v4-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE30E39721C934B600630B68 /* Build configuration list for PBXProject "macOS SDK v4 Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE30E3AE21C934B800630B68 /* Debug */,
+				FE30E3AF21C934B800630B68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE30E3B021C934B800630B68 /* Build configuration list for PBXNativeTarget "macOS SDK v4 Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE30E3B121C934B800630B68 /* Debug */,
+				FE30E3B221C934B800630B68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE30E39421C934B600630B68 /* Project object */;
+}
