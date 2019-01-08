@@ -125,8 +125,8 @@
 /* Class = "NSMenuItem"; title = "Open…"; ObjectID = "IAo-SY-fd9"; */
 "IAo-SY-fd9.title" = "Open…";
 
-/* Class = "NSWindow"; title = "RandomNumberGenerator 500"; ObjectID = "IQv-IB-iLA"; */
-"IQv-IB-iLA.title" = "RandomNumberGenerator 500";
+/* Class = "NSWindow"; title = "Random Number Generator 500"; ObjectID = "IQv-IB-iLA"; */
+"IQv-IB-iLA.title" = "Random Number Generator 500";
 
 /* Class = "NSMenuItem"; title = "Justify"; ObjectID = "J5U-5w-g23"; */
 "J5U-5w-g23.title" = "Justify";

@@ -28,7 +28,7 @@ NSNotificationName const PAD_PRODUCT_DEACTIVATED = @"random_number_generator_pro
 {
     PADProductConfiguration *config = [PADProductConfiguration configuration:PAD_SDK_PRODUCT_NAME
                                                                   vendorName:PAD_VENDOR_NAME];
-    config.trialText = @"Thank you for trying out the RandomNumberGenerator 500";
+    config.trialText = @"Thank you for trying out the Random Number Generator 500";
     config.trialType = PADProductTrialTimeLimited;
     config.trialLength = @14;
     config.price = @10;
