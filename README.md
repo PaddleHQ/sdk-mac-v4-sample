@@ -10,6 +10,7 @@ these methods simultaneously.
 
 1. Install [Bundler](https://bundler.io/). Typically this will be `gem install bundler`.
 1. Install the Cocoapods gem using `bundle install`.
+1. Update Cocoapods' cache using `bundle exec pod repo update`.
 1. Install the PaddleV4 pod using `bundle exec pod install`.
 1. Open the Xcode workspace using `open "macOS SDK v4 Sample.xcworkspace"`.
 1. Set your team for development signing and select a signing certificate managed by Apple.
