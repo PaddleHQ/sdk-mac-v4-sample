@@ -31,6 +31,10 @@ TODO: link to documentation to create Paddle account and an SDK product.
 
 The sample app only provides trivial functionality as the main purpose is to highlight the features and best practices of the Paddle SDK. The app can generate random numbers between 0 and 1000. The random number is generated when the user clicks the label in the centre of the app. 
 
+## Testing localizations
+
+The Paddle SDK has been localized for a number of languages. To make testing easier, there is a different build scheme for every supported language. For instance, to see the Chinese localizations, select the "macOS SDK v4 Sample - Chinese (Simplified)" scheme before running the app.
+
 ## Features and best practices
 
 ### Dialogs as sheets
