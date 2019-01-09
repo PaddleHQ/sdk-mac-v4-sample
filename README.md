@@ -22,6 +22,7 @@ product with a 14-day trial; you may want to use a similar product.
     * product ID,
     * product name, and,
     * framework API key.
+1. Select the scheme with your preferred language, e.g. "macOS SDK v4 Sample - German > My Mac". You can also switch to any other language that you'd like test.
 1. Run the app in Xcode.
 
 TODO: link to documentation to create Paddle account and an SDK product.
