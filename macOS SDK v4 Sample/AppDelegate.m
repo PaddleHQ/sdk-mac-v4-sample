@@ -27,10 +27,9 @@
     Paddle *paddle = [Paddle sharedInstanceWithVendorID:PAD_VENDOR_ID
                                                  apiKey:PAD_API_KEY
                                               productID:PAD_SDK_PRODUCT_ID // Note that this must be an SDK product id!
-                                          configuration:[AppConfig configurationForMainProduct]];
-
-    // The delegate should be set early to catch any errors and warnings.
-    paddle.delegate = self;
+                                          configuration:[AppConfig configurationForMainProduct]
+                                               // The delegate should be set early to catch any errors and warnings.
+                                               delegate:self];
 
     // The Paddle SDK is enforcing the trial for us. Just to be sure that the app is closed
     // when it should, we'll enable force-exit.
@@ -60,29 +59,11 @@
     NSLog(@"Paddle error occurred: %@", error);
 }
 
-- (void)didDismissPaddleUIType:(PADUIType)uiType
-               triggeredUIType:(PADTriggeredUIType)triggeredUIType
-                       product:(PADProduct *)product
+- (BOOL)canAutoActivate:(PADProduct *)product
 {
-    if (uiType == PADUILicense) {
-        // When the license dialog has been closed, the activation status could have changed.
-        // We've stored the activation status on app launch so that we can compare to the current status
-        // now. If the status has changed, notify any listeners.
-
-        NSNotificationName sendNotificationName;
-
-        if (product.activated && !self.mainProductActivated) {
-            sendNotificationName = PAD_PRODUCT_ACTIVATED;
-        } else if (!product.activated && self.mainProductActivated) {
-            sendNotificationName = PAD_PRODUCT_DEACTIVATED;
-        }
-
-        if (sendNotificationName) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:sendNotificationName
-                                                                object:nil
-                                                              userInfo:@{ @"product" : product }];
-        }
-    }
+    // We only have 1 product and we're happy to automatically activate it.
+    // The UI is updated immediately after the activation, so the user will not be left in a state of confusion.
+    return YES;
 }
 
 @end

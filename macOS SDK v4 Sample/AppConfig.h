@@ -14,12 +14,6 @@ FOUNDATION_EXPORT NSString *const PAD_API_KEY;
 FOUNDATION_EXPORT NSString *const PAD_VENDOR_ID;
 FOUNDATION_EXPORT NSString *const PAD_SDK_PRODUCT_ID;
 
-// `NSNotificationCenter` event to signal that a product has been activated.
-FOUNDATION_EXPORT NSNotificationName const PAD_PRODUCT_ACTIVATED;
-
-// `NSNotificationCenter` event to signal that a product has been deactivated.
-FOUNDATION_EXPORT NSNotificationName const PAD_PRODUCT_DEACTIVATED;
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AppConfig : NSObject

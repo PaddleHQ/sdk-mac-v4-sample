@@ -66,3 +66,17 @@ The above strategy is triggered at 2 key points in the lifecycle of the app: on 
 Users may already have a license for your app but could possibly not find the license in their inbox. For such cases the macOS SDK provides a dialog to recover licenses relevant to your product. The dialog asks for the user's email and if the email is valid, Paddle will send the user an email containing their license(s).
 
 The sample app has a button in the trial bar called "Forgot your license?" to show this dialog.
+
+### Automatic activation after purchase
+
+Introduced in v4.0.8.
+
+We've enabled automatic activation; when the product is purchased it will be automatically silently activated. Which provides a more streamlined purchasing and activation experience. This functionality is implemented through the `PaddleDelegate canAutoActivate` method.
+
+### Notification of activation
+
+Introduced in v4.0.8.
+
+The delegate of `PADProduct` is now notified when the activation state changes through the `productActivated` and `productDeactivated` delegate methods. We use these to toggle if the trial banner should show.
+
+Note that the delegate methods are called for activation and deactivation only. This excludes migration of v3 licenses (there already exists a delegate method for this migration) and destroying the activation (which is not a deactivation action).

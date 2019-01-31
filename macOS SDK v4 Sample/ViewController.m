@@ -11,7 +11,7 @@
 #include <stdlib.h>
 @import Paddle;
 
-@interface ViewController ()
+@interface ViewController () <PADProductDelegate>
 
 /**
  * @discussion Track whether there is a verification of the local activation in progress.
@@ -39,16 +39,11 @@
     self.statusBar.hidden = mainProduct.activated;
     [self setDisplayBasedOnProductStatus];
 
-    // Subscribe to changes to the product's activated state.
-    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    [notificationCenter addObserver:self
-                           selector:@selector(productActivatedNotification:)
-                               name:PAD_PRODUCT_ACTIVATED
-                             object:nil];
-    [notificationCenter addObserver:self
-                           selector:@selector(productDeactivatedNotification:)
-                               name:PAD_PRODUCT_DEACTIVATED
-                             object:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [mainProduct deactivateWithCompletion:^(BOOL deactivated, NSError *_Nullable error) {
+            NSLog(@"error? %@", error);
+        }];
+    });
 }
 
 #pragma mark - Gesture handler
@@ -187,24 +182,30 @@
 
 - (PADProduct *)mainProduct
 {
-    return [[PADProduct alloc] initWithProductID:PAD_SDK_PRODUCT_ID
-                                     productType:PADProductTypeSDKProduct
-                                   configuration:[AppConfig configurationForMainProduct]];
+    PADProduct *product = [[PADProduct alloc] initWithProductID:PAD_SDK_PRODUCT_ID
+                                                    productType:PADProductTypeSDKProduct
+                                                  configuration:[AppConfig configurationForMainProduct]];
+    product.delegate = self;
+    return product;
 }
 
-#pragma mark - Notification handlers
+#pragma mark - PADProductDelegate handlers
 
-- (void)productActivatedNotification:(NSNotification *)notification
+- (void)productActivated
 {
-    // Clear the random number label to remove any warning like "Please purchase to continue…".
-    self.randomNumberLabel.stringValue = @"";
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // Clear the random number label to remove any warning like "Please purchase to continue…".
+        self.randomNumberLabel.stringValue = @"";
 
-    [self setDisplayBasedOnProductStatus];
+        [self setDisplayBasedOnProductStatus];
+    });
 }
 
-- (void)productDeactivatedNotification:(NSNotification *)notification
+- (void)productDeactivated
 {
-    [self setDisplayBasedOnProductStatus];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setDisplayBasedOnProductStatus];
+    });
 }
 
 #pragma mark - Private methods

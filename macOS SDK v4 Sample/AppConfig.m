@@ -19,9 +19,6 @@ NSString *const PAD_SDK_PRODUCT_NAME = @"";
 //
 // ====================================================================
 
-NSNotificationName const PAD_PRODUCT_ACTIVATED = @"random_number_generator_product_activated";
-NSNotificationName const PAD_PRODUCT_DEACTIVATED = @"random_number_generator_product_deactivated";
-
 @implementation AppConfig
 
 + (PADProductConfiguration *)configurationForMainProduct
