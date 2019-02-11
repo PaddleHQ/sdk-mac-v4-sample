@@ -81,7 +81,7 @@ The delegate of `PADProduct` is now notified when the activation state changes t
 
 Note that the delegate methods are called for activation and deactivation only. This excludes migration of v3 licenses (there already exists a delegate method for this migration) and destroying the activation (which is not a deactivation action).
 
-### Trial text localizations
+### Trial text localizations
 
 Introduced in v4.0.9.
 
