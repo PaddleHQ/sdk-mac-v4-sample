@@ -12,8 +12,6 @@
 
 @interface AppDelegate () <PaddleDelegate>
 
-@property BOOL mainProductActivated;
-
 @end
 
 @implementation AppDelegate
@@ -34,12 +32,6 @@
     // The Paddle SDK is enforcing the trial for us. Just to be sure that the app is closed
     // when it should, we'll enable force-exit.
     paddle.canForceExit = YES;
-
-    // Track whether the SDK product has been activated.
-    PADProduct *mainProduct = [[PADProduct alloc] initWithProductID:PAD_SDK_PRODUCT_ID
-                                                        productType:PADProductTypeSDKProduct
-                                                      configuration:[AppConfig configurationForMainProduct]];
-    self.mainProductActivated = mainProduct.activated;
 }
 
 #pragma mark - Paddle Delegate methods

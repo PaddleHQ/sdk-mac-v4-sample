@@ -26,6 +26,7 @@ NSString *const PAD_SDK_PRODUCT_NAME = @"";
     PADProductConfiguration *config = [PADProductConfiguration configuration:PAD_SDK_PRODUCT_NAME
                                                                   vendorName:PAD_VENDOR_NAME];
     config.trialText = @"Thank you for trying out the Random Number Generator 500";
+    config.localizedTrialText = NSLocalizedStringFromTableInBundle(@"Thank you for trying out the Random Number Generator 500", nil, [NSBundle mainBundle], nil);
     config.trialType = PADProductTrialTimeLimited;
     config.trialLength = @14;
     config.price = @10;

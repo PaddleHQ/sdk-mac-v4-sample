@@ -186,6 +186,7 @@
                                                     productType:PADProductTypeSDKProduct
                                                   configuration:[AppConfig configurationForMainProduct]];
     product.delegate = self;
+    product.localizedTrialText = NSLocalizedStringFromTableInBundle(@"Thank you for trying out the Random Number Generator 500", nil, [NSBundle mainBundle], nil);
     return product;
 }
 

@@ -80,3 +80,11 @@ Introduced in v4.0.8.
 The delegate of `PADProduct` is now notified when the activation state changes through the `productActivated` and `productDeactivated` delegate methods. We use these to toggle if the trial banner should show.
 
 Note that the delegate methods are called for activation and deactivation only. This excludes migration of v3 licenses (there already exists a delegate method for this migration) and destroying the activation (which is not a deactivation action).
+
+### Trial text localizations
+
+Introduced in v4.0.9.
+
+As the Paddle dialogs are fully localized, the default trial text property (`PADProduct.trialText`) can stand out. In v4.0.9 `PADProduct.localizedTrialText` was introduced as a preferred method of setting the trial text. If the localized trial text property is set, it will be used in the product access dialog. If this property is not set, the default trial text property will still be used.
+
+In the sample app the `PADProduct.localizedTrialText` is set when the product is configured and when it is used in the main view controller. This ensures that the most appropriate translation is shown, especially when switching between schemes with different locales.
