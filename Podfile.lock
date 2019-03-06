@@ -1,16 +1,16 @@
 PODS:
-  - PaddleV4 (4.0.9)
+  - PaddleV4 (4.0.10)
 
 DEPENDENCIES:
-  - PaddleV4 (= 4.0.9)
+  - PaddleV4 (= 4.0.10)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - PaddleV4
 
 SPEC CHECKSUMS:
-  PaddleV4: 6fcda27af19b19fc153e4dae8b13a929958a77d5
+  PaddleV4: b51311d36795bab49716c37e6574e9b1941d413c
 
-PODFILE CHECKSUM: 3fb3e0bceb95bbdf429ef840850571d6ce790bca
+PODFILE CHECKSUM: 6fce5ecf24ea7df9121b9d13c5d074bf77a1511f
 
 COCOAPODS: 1.6.0.beta.2
