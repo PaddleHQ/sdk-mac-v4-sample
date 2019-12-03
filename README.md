@@ -2,6 +2,8 @@
 
 The sample app for the [macOS SDK v4](https://github.com/PaddleHQ/Mac-Framework-V4) highlights features and best practices enabled by the SDK.
 
+To report Issues / Bugs Please contact Paddle Support by emailing sellers@paddle.com
+
 ## Installation
 
 The sample app uses Cocoapods to install the PaddleV4 pod. Other ways to integrate the macOS SDK exist,
