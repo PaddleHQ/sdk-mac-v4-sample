@@ -249,7 +249,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-macOS SDK v4 Sample/Pods-macOS SDK v4 Sample-frameworks.sh",
-				"${PODS_ROOT}/PaddleV4/Paddle.framework",
+				"${PODS_ROOT}/PaddleV4/Mac-Framework-V4-4.1.0/Paddle.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
