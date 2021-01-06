@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57347270256E8BC5001C8158 /* ActivateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5734726F256E8BC5001C8158 /* ActivateViewController.m */; };
+		573472732575240D001C8158 /* DeactivateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 573472722575240D001C8158 /* DeactivateViewController.m */; };
 		5F2B5E7F791EB27A3A962CB4 /* libPods-macOS SDK v4 Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29ACA51A36BC154FFE5DCA45 /* libPods-macOS SDK v4 Sample.a */; };
 		FE30E3A121C934B600630B68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE30E3A021C934B600630B68 /* AppDelegate.m */; };
 		FE30E3A421C934B600630B68 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE30E3A321C934B600630B68 /* ViewController.m */; };
@@ -19,6 +21,10 @@
 
 /* Begin PBXFileReference section */
 		29ACA51A36BC154FFE5DCA45 /* libPods-macOS SDK v4 Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-macOS SDK v4 Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5734726E256E8BC5001C8158 /* ActivateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivateViewController.h; sourceTree = "<group>"; };
+		5734726F256E8BC5001C8158 /* ActivateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivateViewController.m; sourceTree = "<group>"; };
+		573472712575240D001C8158 /* DeactivateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeactivateViewController.h; sourceTree = "<group>"; };
+		573472722575240D001C8158 /* DeactivateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeactivateViewController.m; sourceTree = "<group>"; };
 		C431DF1738BD8909333D5C7D /* Pods-macOS SDK v4 Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS SDK v4 Sample.debug.xcconfig"; path = "Target Support Files/Pods-macOS SDK v4 Sample/Pods-macOS SDK v4 Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		F99F94DE5FC8889BD2592D46 /* Pods-macOS SDK v4 Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS SDK v4 Sample.release.xcconfig"; path = "Target Support Files/Pods-macOS SDK v4 Sample/Pods-macOS SDK v4 Sample.release.xcconfig"; sourceTree = "<group>"; };
 		FE30E39C21C934B600630B68 /* macOS SDK v4 Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macOS SDK v4 Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,10 +133,14 @@
 				FE30E3A321C934B600630B68 /* ViewController.m */,
 				FE30E3A521C934B800630B68 /* Assets.xcassets */,
 				FE30E3A721C934B800630B68 /* Main.storyboard */,
+				573472712575240D001C8158 /* DeactivateViewController.h */,
+				573472722575240D001C8158 /* DeactivateViewController.m */,
 				FE30E3AA21C934B800630B68 /* Info.plist */,
 				FE30E3AB21C934B800630B68 /* main.m */,
 				FE30E3AD21C934B800630B68 /* macOS_SDK_v4_Sample.entitlements */,
 				FE30E3C721CBB9B200630B68 /* Localizable.strings */,
+				5734726E256E8BC5001C8158 /* ActivateViewController.h */,
+				5734726F256E8BC5001C8158 /* ActivateViewController.m */,
 			);
 			path = "macOS SDK v4 Sample";
 			sourceTree = "<group>";
@@ -269,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573472732575240D001C8158 /* DeactivateViewController.m in Sources */,
 				FE30E3A421C934B600630B68 /* ViewController.m in Sources */,
+				57347270256E8BC5001C8158 /* ActivateViewController.m in Sources */,
 				FE30E3BC21CA2E3C00630B68 /* AppConfig.m in Sources */,
 				FE30E3AC21C934B800630B68 /* main.m in Sources */,
 				FE30E3A121C934B600630B68 /* AppDelegate.m in Sources */,

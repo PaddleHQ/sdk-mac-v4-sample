@@ -13,12 +13,14 @@
 FOUNDATION_EXPORT NSString * _Nonnull const PAD_API_KEY;
 FOUNDATION_EXPORT NSString * _Nonnull const PAD_VENDOR_ID;
 FOUNDATION_EXPORT NSString * _Nonnull const PAD_SDK_PRODUCT_ID;
+FOUNDATION_EXPORT NSString * _Nonnull const PAD_SDK_SECOND_PRODUCT_ID;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AppConfig : NSObject
 
 + (PADProductConfiguration *)configurationForMainProduct;
++ (PADProductConfiguration *)configurationForSecondProduct;
 
 @end
 

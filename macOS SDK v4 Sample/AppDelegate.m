@@ -39,10 +39,14 @@
 - (PADDisplayConfiguration *)willShowPaddleUIType:(PADUIType)uiType
                                           product:(PADProduct *)product
 {
+    if (uiType == PADTriggeredUITypeShowProductAccess) {
+        return nil;
+    }
+    
     // We'll unconditionally display all configurable Paddle dialogs as sheets attached to the main window.
-    return [PADDisplayConfiguration configuration:PADDisplayTypeSheet
+    return [PADDisplayConfiguration configuration:PADDisplayTypeWindow
                             hideNavigationButtons:NO
-                                     parentWindow:NSApp.mainWindow];
+                                     parentWindow:nil];
 }
 
 - (void)paddleDidError:(NSError *)error
@@ -53,7 +57,6 @@
 
 - (BOOL)canAutoActivate:(PADProduct *)product
 {
-    // We only have 1 product and we're happy to automatically activate it.
     // The UI is updated immediately after the activation, so the user will not be left in a state of confusion.
     return YES;
 }

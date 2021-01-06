@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -620,7 +620,7 @@
                                         <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
-                                                <action selector="toggleSourceList:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
+                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
@@ -707,31 +707,13 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="716" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="722" height="667"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLW-4B-jAL">
-                                <rect key="frame" x="0.0" y="637" width="716" height="30"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="bLW-4B-jAL">
+                                <rect key="frame" x="0.0" y="637" width="722" height="30"/>
                                 <subviews>
-                                    <textField identifier="lblStatusMessage" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8p6-r8-u4B">
-                                        <rect key="frame" x="356" y="8" width="4" height="17"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" id="y3t-Bk-jmk">
-                                            <font key="font" usesAppearanceFont="YES"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <button identifier="btnUpgrade" horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FrI-2m-ax5">
-                                        <rect key="frame" x="377" y="-3" width="93" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Upgrade" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vwf-39-Jys">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="upgradeButtonClicked:" target="XfG-lQ-9wD" id="PkA-vd-Rwe"/>
-                                        </connections>
-                                    </button>
-                                    <button identifier="btnForgottenLicense" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j5y-Pk-iyb">
+                                    <button identifier="btnForgottenLicense" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j5y-Pk-iyb">
                                         <rect key="frame" x="467" y="-3" width="183" height="32"/>
                                         <buttonCell key="cell" type="push" title="Forgotten your license?" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zrh-39-uo3">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -741,44 +723,220 @@
                                             <action selector="forgottenLicenseButtonClicked:" target="XfG-lQ-9wD" id="UAL-wV-RaW"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVy-AX-pdV">
+                                        <rect key="frame" x="14" y="-3" width="159" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Activate License" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Msi-6C-rqW">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <segue destination="Yxt-Rq-gIK" kind="show" id="EJw-7m-pQ6"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Och-3p-TpS">
+                                        <rect key="frame" x="173" y="-3" width="159" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Deactivate License" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6ug-1w-R9M">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <segue destination="PSb-pb-VIW" kind="show" id="7X8-lh-QLI"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="j5y-Pk-iyb" secondAttribute="trailing" constant="20" id="4sD-kv-gZm"/>
-                                    <constraint firstItem="j5y-Pk-iyb" firstAttribute="leading" secondItem="FrI-2m-ax5" secondAttribute="trailing" constant="9" id="SKt-gT-eJ1"/>
                                     <constraint firstAttribute="height" constant="30" id="eNI-VP-o67"/>
-                                    <constraint firstItem="FrI-2m-ax5" firstAttribute="top" secondItem="bLW-4B-jAL" secondAttribute="top" constant="5" id="iWl-oQ-CJR"/>
-                                    <constraint firstItem="j5y-Pk-iyb" firstAttribute="top" secondItem="FrI-2m-ax5" secondAttribute="top" id="tP3-vp-wJ5"/>
-                                    <constraint firstItem="FrI-2m-ax5" firstAttribute="leading" secondItem="8p6-r8-u4B" secondAttribute="trailing" constant="25" id="ug0-cF-oEt"/>
-                                    <constraint firstItem="8p6-r8-u4B" firstAttribute="top" secondItem="bLW-4B-jAL" secondAttribute="top" constant="5" id="xcl-cR-yAt"/>
-                                    <constraint firstItem="8p6-r8-u4B" firstAttribute="centerX" secondItem="bLW-4B-jAL" secondAttribute="centerX" id="yDh-eG-UYm"/>
                                 </constraints>
                             </customView>
-                            <textField identifier="lblRandomNumber" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xnw-fk-1XD">
-                                <rect key="frame" x="164" y="316" width="389" height="36"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" placeholderString="Click me for a random number" id="qJv-VT-TA1">
-                                    <font key="font" metaFont="system" size="30"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jCm-K4-vAa">
+                                <rect key="frame" x="266" y="588" width="85" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Main Product" id="LXI-7K-WG7">
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kgf-9h-2qh">
+                                <rect key="frame" x="266" y="555" width="102" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Second Product" id="PsD-LC-5RT">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button identifier="btnSecondProduct" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQb-vR-dIZ">
+                                <rect key="frame" x="389" y="545" width="164" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Buy Second Product" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ryy-8f-TY0">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="secondProductButtonClicked:" target="XfG-lQ-9wD" id="zQq-oy-kcF"/>
+                                </connections>
+                            </button>
+                            <button identifier="btnUpgrade" horizontalHuggingPriority="249" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FrI-2m-ax5">
+                                <rect key="frame" x="389" y="578" width="164" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Buy Main Product" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vwf-39-Jys">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="upgradeButtonClicked:" target="XfG-lQ-9wD" id="PkA-vd-Rwe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="bLW-4B-jAL" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="AHK-Oh-r8Y"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="j5y-Pk-iyb" secondAttribute="trailing" constant="20" id="BSN-k5-XLQ"/>
                             <constraint firstItem="bLW-4B-jAL" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="YwF-KK-rum"/>
-                            <constraint firstItem="Xnw-fk-1XD" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="hmE-nt-Gz5"/>
-                            <constraint firstItem="Xnw-fk-1XD" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="m5l-S5-Hpi"/>
                             <constraint firstItem="bLW-4B-jAL" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" id="umz-Ux-nBN"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="randomNumberLabel" destination="Xnw-fk-1XD" id="DEz-tV-mGg"/>
+                        <outlet property="mainProductButton" destination="FrI-2m-ax5" id="9g9-60-Bpm"/>
+                        <outlet property="secondProductButton" destination="QQb-vR-dIZ" id="Sai-R7-GTB"/>
                         <outlet property="statusBar" destination="bLW-4B-jAL" id="xU9-cL-iod"/>
-                        <outlet property="statusMessageLabel" destination="8p6-r8-u4B" id="U1f-bT-9uo"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="535" y="853.5"/>
+        </scene>
+        <!--Activate View Controller-->
+        <scene sceneID="bWy-Me-Low">
+            <objects>
+                <viewController id="Yxt-Rq-gIK" customClass="ActivateViewController" sceneMemberID="viewController">
+                    <view key="view" id="aks-gq-dad">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="171"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTR-2R-0Hz">
+                                <rect key="frame" x="18" y="97" width="215" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="Main Product" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="o6k-VH-uFx" id="cld-m0-Qh9">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="so4-md-VYt">
+                                        <items>
+                                            <menuItem title="Main Product" id="o6k-VH-uFx"/>
+                                            <menuItem title="Second Product" state="on" id="KDE-x5-vAF"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3PZ-cL-ymh">
+                                <rect key="frame" x="18" y="264" width="414" height="16"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Select the product you would like to activate the license for." id="DMJ-hV-eph">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEK-Ee-wdU">
+                                <rect key="frame" x="14" y="13" width="82" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6y1-sK-b5n">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cancelButton:" target="Yxt-Rq-gIK" id="gvU-c1-2SY"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cs8-yE-URe">
+                                <rect key="frame" x="367" y="13" width="69" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Z47-Bi-AYf">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="nextButton:" target="Yxt-Rq-gIK" id="DAA-Rn-wrh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="productSelection" destination="cTR-2R-0Hz" id="wHg-0j-Eie"/>
+                    </connections>
+                </viewController>
+                <customObject id="po0-Ic-bQ7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="604" y="1338.5"/>
+        </scene>
+        <!--Deactivate View Controller-->
+        <scene sceneID="UdR-iv-Mp1">
+            <objects>
+                <viewController id="PSb-pb-VIW" customClass="DeactivateViewController" sceneMemberID="viewController">
+                    <view key="view" id="yx4-3l-Gp2">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="141"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGw-u5-ZUg">
+                                <rect key="frame" x="14" y="13" width="82" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ubo-rf-wgU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cancelButton:" target="PSb-pb-VIW" id="U9d-ox-ACc"/>
+                                </connections>
+                            </button>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIO-E1-bWT">
+                                <rect key="frame" x="18" y="97" width="215" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="Second Product" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="m7k-9k-nK7" id="u0r-D1-SBa">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" autoenablesItems="NO" id="TWH-m2-540">
+                                        <items>
+                                            <menuItem title="Main Product" id="aNK-xa-se2"/>
+                                            <menuItem title="Second Product" state="on" id="m7k-9k-nK7"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1F-ig-LEP">
+                                <rect key="frame" x="367" y="13" width="69" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lMu-EL-NZJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="nextButton:" target="PSb-pb-VIW" id="xLV-Ck-bni"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="productSelection" destination="fIO-E1-bWT" id="jGb-4S-DT1"/>
+                    </connections>
+                </viewController>
+                <customObject id="uD4-WS-VxE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64" y="1436.5"/>
         </scene>
     </scenes>
 </document>

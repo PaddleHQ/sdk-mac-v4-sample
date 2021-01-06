@@ -16,26 +16,17 @@ these methods simultaneously.
 1. Install the PaddleV4 pod using `bundle exec pod install`.
 1. Open the Xcode workspace using `open "macOS SDK v4 Sample.xcworkspace"`.
 1. Set your team for development signing and select a signing certificate managed by Apple.
-1. Create your Paddle seller account and SDK product, if you haven't already. The app has been configured with a
-product with a 14-day trial; you may want to use a similar product.
+1. Create your Paddle seller account and SDK product, if you haven't already. 
 1. In `AppConfig.m` enter your
     * seller account ID,
     * seller acount name,
     * product ID,
-    * product name, and,
+    * product name,
+    * Second product ID,
+    * Second product name,
     * framework API key.
-1. Select the scheme with your preferred language, e.g. "macOS SDK v4 Sample - German > My Mac". You can also switch to any other language that you'd like test.
 1. Run the app in Xcode.
 
-TODO: link to documentation to create Paddle account and an SDK product.
-
-## Sample app functionality
-
-The sample app only provides trivial functionality as the main purpose is to highlight the features and best practices of the Paddle SDK. The app can generate random numbers between 0 and 1000. The random number is generated when the user clicks the label in the centre of the app. 
-
-## Testing localizations
-
-The Paddle SDK has been localized for a number of languages. To make testing easier, there is a different build scheme for every supported language. For instance, to see the Chinese localizations, select the "macOS SDK v4 Sample - Chinese (Simplified)" scheme before running the app.
 
 ## Features and best practices
 
@@ -62,31 +53,3 @@ The strategy implemented in the sample app handles the 4 possible states of the 
 * If the activation is unverified, then the activation has been remotely destroyed. We notify the user of this event and then destroy the local activation to prevent further notifications. The app again returns to the initial, unactivated state.
 
 The above strategy is triggered at 2 key points in the lifecycle of the app: on app launch and when the user uses the core functionality of the app. The combination of these events is just enough to ensure that we are not overzealous in verifying the activation and not lenient enough to allow for unlimited free usage (e.g. when only checking on app launch). The timing could also be explicitly time-based, e.g. every 30 minutes the activation is verified. Both choices, and others, have their benefits.
-
-### Recovering licenses
-
-Users may already have a license for your app but could possibly not find the license in their inbox. For such cases the macOS SDK provides a dialog to recover licenses relevant to your product. The dialog asks for the user's email and if the email is valid, Paddle will send the user an email containing their license(s).
-
-The sample app has a button in the trial bar called "Forgot your license?" to show this dialog.
-
-### Automatic activation after purchase
-
-Introduced in v4.0.8.
-
-We've enabled automatic activation; when the product is purchased it will be automatically silently activated. Which provides a more streamlined purchasing and activation experience. This functionality is implemented through the `PaddleDelegate canAutoActivate` method.
-
-### Notification of activation
-
-Introduced in v4.0.8.
-
-The delegate of `PADProduct` is now notified when the activation state changes through the `productActivated` and `productDeactivated` delegate methods. We use these to toggle if the trial banner should show.
-
-Note that the delegate methods are called for activation and deactivation only. This excludes migration of v3 licenses (there already exists a delegate method for this migration) and destroying the activation (which is not a deactivation action).
-
-### Trial text localizations
-
-Introduced in v4.0.9.
-
-As the Paddle dialogs are fully localized, the default trial text property (`PADProduct.trialText`) can stand out. In v4.0.9 `PADProduct.localizedTrialText` was introduced as a preferred method of setting the trial text. If the localized trial text property is set, it will be used in the product access dialog. If this property is not set, the default trial text property will still be used.
-
-In the sample app the `PADProduct.localizedTrialText` is set when the product is configured and when it is used in the main view controller. This ensures that the most appropriate translation is shown, especially when switching between schemes with different locales.

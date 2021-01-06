@@ -10,8 +10,9 @@
 
 @interface ViewController : NSViewController
 
-@property (weak) IBOutlet NSTextField *randomNumberLabel;
 @property (weak) IBOutlet NSView *statusBar;
-@property (weak) IBOutlet NSTextField *statusMessageLabel;
+
+@property (weak) IBOutlet NSButton *secondProductButton;
+@property (weak) IBOutlet NSButton *mainProductButton;
 
 @end
