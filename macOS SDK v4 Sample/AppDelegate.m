@@ -39,7 +39,7 @@
 - (PADDisplayConfiguration *)willShowPaddleUIType:(PADUIType)uiType
                                           product:(PADProduct *)product
 {
-    if (uiType == PADTriggeredUITypeShowProductAccess) {
+    if (uiType == PADUIProduct) {
         return nil;
     }
     
