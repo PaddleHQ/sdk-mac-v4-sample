@@ -1,16 +1,16 @@
 PODS:
-  - PaddleV4 (4.1.0)
+  - PaddleV4 (4.1.1)
 
 DEPENDENCIES:
-  - PaddleV4 (= 4.1.0)
+  - PaddleV4 (= 4.1.1)
 
 SPEC REPOS:
   trunk:
     - PaddleV4
 
 SPEC CHECKSUMS:
-  PaddleV4: 3b3cfd9b28c80cc849ceacb170677a5c5b52e6dd
+  PaddleV4: 084c29e3c4bbc2217fdf868e639719980b476459
 
-PODFILE CHECKSUM: 0d7b47228e06039ecb9b3ec52b4b3cea342b1425
+PODFILE CHECKSUM: 35be597c309fab10b670657d59df2dee1c8c5a26
 
 COCOAPODS: 1.9.1
