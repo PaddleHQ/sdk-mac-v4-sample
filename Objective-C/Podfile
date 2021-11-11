@@ -1,4 +1,4 @@
 target 'macOS SDK v4 Sample' do
         platform :osx, '10.10'
-        pod 'PaddleV4', '4.1.1'
+        pod 'PaddleV4', '4.2.0'
 end
