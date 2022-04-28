@@ -18,6 +18,12 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    NSString *test = @"test";
+    NSString *test2 = @"test";
+    
+    if (test == test2) {
+        
+    }
     // Enable debugging so we can see what the Paddle SDK is doing.
     [Paddle enableDebug];
 
