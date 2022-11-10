@@ -18,12 +18,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    NSString *test = @"test";
-    NSString *test2 = @"test";
-    
-    if (test == test2) {
-        
-    }
     // Enable debugging so we can see what the Paddle SDK is doing.
     [Paddle enableDebug];
 
@@ -35,6 +29,28 @@
                                                // The delegate should be set early to catch any errors and warnings.
                                                delegate:self];
 
+    PADProduct *mainProduct = [[PADProduct alloc] initWithProductID:PAD_SDK_PRODUCT_ID
+                                                    productType:PADProductTypeSDKProduct
+                                                  configuration:[AppConfig configurationForMainProduct]];
+    
+    [mainProduct verifyActivationWithCompletion:^(PADVerificationState state, NSError * _Nullable error) {
+        if (state == PADVerificationUnverified) {
+            [mainProduct destroyActivation];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"activationsChanged" object:self];
+        }
+    }];
+    
+    PADProduct *secondProduct = [[PADProduct alloc] initWithProductID:PAD_SDK_SECOND_PRODUCT_ID
+                                                    productType:PADProductTypeSDKProduct
+                                                  configuration:[AppConfig configurationForSecondProduct]];
+    
+    [secondProduct verifyActivationWithCompletion:^(PADVerificationState state, NSError * _Nullable error) {
+        if (state == PADVerificationUnverified) {
+            [secondProduct destroyActivation];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"activationsChanged" object:self];
+        }
+    }];
+    
     // The Paddle SDK is enforcing the trial for us. Just to be sure that the app is closed
     // when it should, we'll enable force-exit.
     paddle.canForceExit = YES;

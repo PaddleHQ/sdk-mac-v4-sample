@@ -15,4 +15,10 @@
 @property (weak) IBOutlet NSButton *secondProductButton;
 @property (weak) IBOutlet NSButton *mainProductButton;
 
+@property (weak) IBOutlet NSTextField *mainProductActivationCount;
+@property (weak) IBOutlet NSTextField *secondProductActivationCount;
+
+@property (weak) IBOutlet NSButton *mainProductActivationReclaim;
+@property (weak) IBOutlet NSButton *secondProductActivationReclaim;
+
 @end

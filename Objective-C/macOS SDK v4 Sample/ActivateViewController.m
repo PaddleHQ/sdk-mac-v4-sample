@@ -30,12 +30,14 @@
         [Paddle.sharedInstance showLicenseActivationDialogForProduct:[self mainProduct] email:nil licenseCode:nil activationStatusCompletion:^(PADActivationState activationState) {
             if (activationState == PADActivationActivated) {
                 [self.view.window close];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"activationsChanged" object:self];
             }
         }];
     } else {
         [Paddle.sharedInstance showLicenseActivationDialogForProduct:[self secondProduct] email:nil licenseCode:nil activationStatusCompletion:^(PADActivationState activationState) {
             if (activationState == PADActivationActivated) {
                 [self.view.window close];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"activationsChanged" object:self];
             }
         }];
     }
