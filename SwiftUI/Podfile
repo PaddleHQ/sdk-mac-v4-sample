@@ -1,4 +1,4 @@
 target 'PaddleSample SwiftUI' do
-        platform :osx, '10.10'
-        pod 'PaddleV4', '4.4.0'
+        platform :osx, '10.13'
+        pod 'PaddleV4', '4.4.1'
 end
